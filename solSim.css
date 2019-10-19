@@ -1,8 +1,21 @@
-#sideMenu {
+body {
+    background-color: black;
+}
+
+.sideMenu {
+    display: flex;
+    flex-direction: column;
+    align-content: right;
     position: fixed;
-    width: 10%;
-    height: 90%;
-    top: 5%;
-    left: 90%;
-    background-color: grey;
+    width: 15%;
+    height: 60%;
+    background-color: #FFB9C8;
+    border-radius: 20px;
+    padding: 10px;
+    border-style: dashed;
+    left: 80%;
+}
+
+.title {
+    color: white;
 }

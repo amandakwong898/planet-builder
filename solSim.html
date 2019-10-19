@@ -2,19 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script>src = "solSim.js"</script>
+    <title>SolSim</title>
+    <script type="text/javascript" src="./solSim.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="solSim.css"/>
 </head>
 
 <body>
-<h1>Hello, welcome  to Sol Sim</h1>
+<h1 class = "title">Welcome to SolSim!</h1>
 
-<canvas id = game> </canvas>
+<canvas id = game></canvas>
 
-<div id = "sideMenu">
-    <p>Hello, here is stuff in the menu. Fill it up</p>
+<div class = "sideMenu">
+        <p>I am making a:</p>
+    <form>
+        <input type = "radio" name = "bodyRadio" id = "starRadio" onclick = "populateStar()">
+        <label for="starRadio">Star</label>
+        <input type = "radio" name = "bodyRadio" id = "planetRadio" onclick="populatePlanet()">
+        <label for="planetRadio">Planet</label>
+    </form>
+
+    <div id="body_setup">
+    </div>
+
+    <button id = "submit">Submit</button>
 </div>
+
 
 
 </body>
