@@ -1,0 +1,101 @@
+
+
+MERCURY {
+    Planet Type: Terrestrial
+    Radius: 1,516 miles | 2,439.7 kilometers
+    Year: 88 Earth days
+    Day: 176 Earth days
+
+    MASS: 330,104,000,000,000,000,000,000kg
+    SURFACE AREA: 74,797,000km2
+    SURFACE GRAVITY: 3.7m/s2  
+    ESCAPE VELOCITY: 15,300km/h
+}
+
+VENUS {
+    Planet Type: Terrestrial
+    Radius: 3,760 miles | 6,052 kilometers
+    Year: 225 Earth days
+    Day: 243 Earth days 
+
+    MASS: 4,867,320,000,000,000,000,000,000kg
+    SURFACE AREA: 460,234,317km2
+    SURFACE GRAVITY: 8.87m/s2
+    ESCAPE VELOCITY: 37,296km/h
+}
+
+EARTH {
+    Planet Type: Terrestrial
+    Radius: 3,959 miles | 6,371 kilometers
+    Year: 365.25 Earth days
+    Day: 23.9 hours
+
+    MASS: 5,972,190,000,000,000,000,000,000kg
+    SURFACE AREA: 510,064,472km2
+    SURFACE GRAVITY: 9.80665m/s2
+    ESCAPE VELOCITY: 40,284km/h
+}
+
+MARS {
+    Planet Type: Terrestrial
+    Radius: 2,106 miles | 3,390 kilometers
+    Year: 669.6 sols | 687 Earth days
+    Day: 24.6 hours
+
+    MASS: 641,693,000,000,000,000,000,000kg
+    SURFACE AREA: 144,371,391km2
+    SURFACE GRAVITY: 3.71m/s2
+    ESCAPE VELOCITY: 18,108km/h
+}
+
+JUPITER {
+    Planet Type: Gas Giant
+    Diameter: 88,846 miles | 142,984 kilometers
+    Year: 11.86 Earth Years
+    Day: 9.93 hours
+
+    MASS: 1,898,130,000,000,000,000,000,000,000kg
+    SURFACE AREA: 61,418,738,571km2
+    SURFACE GRAVITY: 24.79m/s2
+    ESCAPE VELOCITY: 216,720km/h
+}
+
+SATURN {
+    Planet Type: Gas Giant
+    Radius: 36,183.7 miles | 58,232 kilometers
+    Year: 29 Earth years
+    Day: 10.7 hours
+
+    MASS: 568,319,000,000,000,000,000,000,000kg
+    SURFACE AREA: 42,612,133,285km2
+    SURFACE GRAVITY: 10.4*m/s2
+ESCAPE VELOCITY: 129,924km/h
+}
+
+URANUS {
+    Planet Type: Ice Giant
+    Radius: 15,759.2 miles | 25,362 kilometers
+    Year: 84 Earth years
+    Day: 17 hours 14 minutes
+    
+    MASS: 86,810,300,000,000,000,000,000,000kg
+    SURFACE AREA: 8,083,079,690km2
+    SURFACE GRAVITY: 8.87m/s2
+    ESCAPE VELOCITY: 76,968km/h
+}
+
+NEPTUNE {
+    Planet Type: Ice Giant
+    Radius: 15,299.4 miles | 24,622 kilometers
+    Year: 165 Earth years
+    Day: 16 hours
+
+    MASS: 102,410,000,000,000,000,000,000,000kg
+    SURFACE AREA: 7,618,272,763km2
+    SURFACE GRAVITY: 11.15m/s2
+    ESCAPE VELOCITY: 84,816km/h
+}
+
+
+
+
