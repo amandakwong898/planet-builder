@@ -11,26 +11,33 @@
 <body>
 <h1 class = "title">Hello, welcome to Sol Sim</h1>
 
-<canvas id = game> </canvas>
+<canvas id = game></canvas>
 
-<div id = "sideMenu">
-    <form>
+<div class = "sideMenu">
+    <center>
         <p>I am making a:</p>
         <input type = "radio" name = "bodyRadio" id = "star">Star
         <input type = "radio" name = "bodyRadio" id = "planet">Planet
     </form>
 
     <form>
-        <input type = "text" name = "">Name<br>
-        <input type = "text" name = "">Mass<br>
-        <input type = "text" name = "">Radius<br>
-        <input type = "text" name = "">Temperature<br>
+        Name:<br>
+        <input type = "text" name = "name1"><br>
+        Mass:<br>
+        <input type = "text" name = "mass1"><br>
+        Radius:<br>
+        <input type = "text" name = "radius1"><br>
+        Temperature:<br>
+        <input type = "text" name = "temp"><br>
     </form>
 
     <form>
-        <input type = "text" name = "">Name<br>
-        <input type = "text" name = "">Mass<br>
-        <input type = "text" name = "">Radius<br>
+        Name:<br>
+        <input type = "text" name = "name2"><br>
+        Mass:<br>
+        <input type = "text" name = "mass2"><br>
+        Radius:<br>
+        <input type = "text" name = "radius2"><br>
         <!--starting angle and color wheel selector parameters -->
         <div class="slidecontainer">
             <input type="range" min="0" max="360" value="0" id="startingAngle">
@@ -38,6 +45,8 @@
     </form>
 
     <button id = "submit">Submit</button>
+    </center>
+    <form>
 </div>
 
 
