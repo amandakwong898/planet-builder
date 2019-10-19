@@ -2,7 +2,7 @@ var dummy_array = [{
     "start_x": 149.6 * Math.pow(10, 9),           //earths km from the sun
     "start_y": 0,
     "x_velocity":0,
-    "y_velocity": 30000,                         //velocity in m/s assuming the earth starts at 0
+    "y_velocity": 30000,                                //velocity in m/s assuming the earth starts at 0
     "planet_mass": 5.92 * Math.pow(10, 24),      //kg
     "sun_mass": 1.989 * Math.pow(10, 30)         //kg
 }];
@@ -21,7 +21,7 @@ function startMotion(data) {
     }
     console.log(frame_array)
     return frame_array
-    setInterval (startMotion(frame_array), 1000)
+    //setInterval (startMotion(frame_array), 1000)
 }
 
 function moveBody(x, y, dx, dy, m_planet, time) {
