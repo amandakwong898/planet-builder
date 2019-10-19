@@ -32,7 +32,7 @@ function moveBody(x, y, dx, dy, m_planet, m_sun, time) {
     x = x + dx * time + .5 * ddx * Math.pow(time, 2)
     y = y + dy * time + .5 * ddy * Math.pow(time, 2)
 
-    return {"start_x": x, "start_y": y, "x_velocity": dx, "y_velocity": dy, "planet_mass": m_planet, "sun_mass": m_sun, "time": time,}
+    return {"start_x": x, "start_y": y, "x_velocity": dx, "y_velocity": dy, "planet_mass": m_planet, "sun_mass": m_sun, "time": time}
 };
 
 
