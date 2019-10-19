@@ -1,17 +1,3 @@
-// data = [{planet1},{planet2}]
-//
-//
-// data = [
-//
-//     {"start_x": "50",
-//         "start_y": "30",
-//
-//     }
-//
-// ]
-//
-//
-
 var frame_array = [];
 
 function startMotion(data) {
