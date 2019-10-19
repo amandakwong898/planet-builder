@@ -4,11 +4,11 @@ body {
 
 #sideMenu {
     position: fixed;
-    width: 10%;
-    height: 90%;
+    width: 25%;
+    height: 75%;
     top: 5%;
     left: 90%;
-    background-color: grey;
+    background-color: #FFB9C8;
 }
 
 .title {

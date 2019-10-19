@@ -13,7 +13,32 @@
 <canvas id = game> </canvas>
 
 <div id = "sideMenu">
-    <p>Hello, here is stuff in the menu. Fill it up</p>
+    <form>
+        <p>I am making a:</p>
+        <input type = "checkbox" id = "star">Star
+            <div id = "star"></div>
+        <input type = "checkbox" id = "planet">Planet
+            <div id = "star"></div>
+    </form>
+
+    <form>
+        <input type = "text" name = "name">Name<br>
+        <input type = "text" name = "mass">Mass<br>
+        <input type = "text" name = "radius">Radius<br>
+        <input type = "text" name = "temperature">Temperature<br>
+    </form>
+
+    <form>
+        <input type = "text" name = "name">Name<br>
+        <input type = "text" name = "mass">Mass<br>
+        <input type = "text" name = "radius">Radius<br>
+        <!--starting angle and color wheel selector parameters -->
+        <div class="slidecontainer">
+            <input type="range" min="0" max="360" value="0" id="startingAngle">
+        </div>
+    </form>
+
+    <button id = "submit">Submit</button>
 </div>
 
 
