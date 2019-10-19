@@ -1,3 +1,7 @@
 #sideMenu {
-
+    position: absolute;
+    width: 10%;
+    height: 90%;
+    top: 5%;
+    right: 90%;
 }
