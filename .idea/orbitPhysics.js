@@ -1,6 +1,26 @@
+// data = [{planet1},{planet2}]
+//
+//
+// data = [
+//
+//     {"start_x": "50",
+//         "start_y": "30",
+//
+//     }
+//
+// ]
+//
+//
 
-function main(data) {
+var frame_array = [];
 
+function startMotion(data) {
+    for (i=0 ; i < data.length ; i++) {
+        frame_array.push(moveBody(data[i].start_x, data[i].start_y, data[i].x_velocity, data[i].y_velocity, data[i].planet_mass, data[i].sun_mass, 1) );
+        frame_array.shift();
+    }
+    console.log(frame_array)
+    setInterval (startMotion(frame_data), 33)
 }
 
 function moveBody(x, y, dx, dy, m_planet, m_sun, time) {
@@ -20,6 +40,7 @@ function moveBody(x, y, dx, dy, m_planet, m_sun, time) {
     x = x + dx * time + .5 * ddx * Math.pow(time, 2)
     y = y + dy * time + .5 * ddy * Math.pow(time, 2)
 
-    return [x, y, dx, dy, m_planet, m_sun, time, m_planet]
-}
+    return {"start_x": x, "start_y": y, "x_velocity": dx, "y_velocity": dy, "planet_mass": m_planet, "sun_mass": m_sun, "time": time,}
+};
+
 
