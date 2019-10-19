@@ -1,7 +1,8 @@
 #sideMenu {
-    position: absolute;
+    position: fixed;
     width: 10%;
     height: 90%;
     top: 5%;
     right: 90%;
+    background-color: grey;
 }
