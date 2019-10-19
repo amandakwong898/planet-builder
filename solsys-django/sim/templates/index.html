@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="body">
+  {% if planet_list %}
+  {% for planet in planet_list %}
+  <script>
+    $(function() {
+          $('.planet').planetrender({
+              {
+               {{planet.start_x}}
+               {{planet.start_y}}
+               {{planet.sun_mass}}
+               {{planet.mass}}
+               {{'30' }}
+               }
+          });
+  </script>
+  {% endfor %}
+  {% endif %}
+</div>
+{% endblock %}
