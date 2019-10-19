@@ -1,12 +1,18 @@
 var frame_array = [];
 
+// {
+//     "start_x" : 50,
+//     "start_y" : 50,
+//     "x_velocity" : 50
+// }
+
 function startMotion(data) {
     for (i=0 ; i < data.length ; i++) {
         frame_array.push(moveBody(data[i].start_x, data[i].start_y, data[i].x_velocity, data[i].y_velocity, data[i].planet_mass, data[i].sun_mass, 1) );
         frame_array.shift();
     }
     console.log(frame_array)
-    setInterval (startMotion(frame_data), 33)
+    setInterval (startMotion(frame_array), 33)
 }
 
 function moveBody(x, y, dx, dy, m_planet, m_sun, time) {
