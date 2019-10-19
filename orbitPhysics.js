@@ -5,7 +5,7 @@ var dummy_array = [{
     "y_velocity": 10000,
     "planet_mass": 1000,
     "sun_mass": 100000000000000
-}]
+}];
 
 function cheapTrick() {
     startMotion(frame_array);
@@ -20,6 +20,7 @@ function startMotion(data) {
         frame_array = [(moveBody(data[i].start_x, data[i].start_y, data[i].x_velocity, data[i].y_velocity, data[i].planet_mass, data[i].sun_mass, 3))]
     }
     console.log(frame_array)
+    return frame_array
     //setInterval (startMotion(frame_array), 1000)
 }
 
