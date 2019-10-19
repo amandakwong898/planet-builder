@@ -1,18 +1,26 @@
-var frame_array = [];
+var dummy_array = [{
+    "start_x": 1000,
+    "start_y": 1000,
+    "x_velocity":10000,
+    "y_velocity": 10000,
+    "planet_mass": 1000,
+    "sun_mass": 100000000000000
+}]
 
-// {
-//     "start_x" : 50,
-//     "start_y" : 50,
-//     "x_velocity" : 50
-// }
+function cheapTrick() {
+    startMotion(frame_array);
+}
+
+var frame_array;
 
 function startMotion(data) {
+
     for (i=0 ; i < data.length ; i++) {
-        frame_array.push(moveBody(data[i].start_x, data[i].start_y, data[i].x_velocity, data[i].y_velocity, data[i].planet_mass, data[i].sun_mass, 1) );
-        frame_array.shift();
+        //frame_array.shift();
+        frame_array = [(moveBody(data[i].start_x, data[i].start_y, data[i].x_velocity, data[i].y_velocity, data[i].planet_mass, data[i].sun_mass, 3))]
     }
     console.log(frame_array)
-    setInterval (startMotion(frame_array), 33)
+    //setInterval (startMotion(frame_array), 1000)
 }
 
 function moveBody(x, y, dx, dy, m_planet, m_sun, time) {
@@ -26,6 +34,10 @@ function moveBody(x, y, dx, dy, m_planet, m_sun, time) {
         ddx         =   force_x / m_planet,
         ddy         =   force_y / m_planet;
 
+
+    console.log(theta)
+    console.log(radius)
+
     dx = dx + ddx * time
     dy = dy + ddy * time
 
@@ -34,5 +46,3 @@ function moveBody(x, y, dx, dy, m_planet, m_sun, time) {
 
     return {"start_x": x, "start_y": y, "x_velocity": dx, "y_velocity": dy, "planet_mass": m_planet, "sun_mass": m_sun, "time": time}
 };
-
-
