@@ -14,18 +14,18 @@ body {
     flex-direction: column;
     position: fixed;
     width: 15%;
-    height: 60%;
+    height: 90%;
     background-color: #FFB9C8;
     border-radius: 20px;
     padding: 10px;
-    border-style: dotted;
     left: 80%;
-    bottom: 15%;
+    bottom: 5%;
+    overflow: scroll;
 }
 
 .title {
     color: white;
-    font-family: 'Modak', cursive;
+    font-family: 'Arial', cursive;
     font-size: 100px;
     text-align: center;
 }
@@ -109,12 +109,10 @@ p {
 }*/
 
 input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
+
     margin: 8px 0;
     box-sizingx: border-box;
     font-family: Arial;
-    font-size: 14px;
     color: magenta;
 }
 
@@ -153,4 +151,15 @@ input[type=text] {
     border: 1px solid #ccc;
     border-top: none;
     height: 80%;
+}
+
+.planet {
+    r: 4px;
+    fill: green;
+}
+
+
+.sun {
+    r: 10px;
+    fill: orange;
 }

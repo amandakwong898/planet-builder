@@ -37,21 +37,16 @@ var dummy_array = [
     }
 ];
 
+
 var hours = 0;
-
-function seeMe() {
-    return "hello_world"
-    console.log("hello_world")
-}
-
 var frame_array;
 
 
 function startMotion(data) {
     console.log(data)
     getNewArray(data);
-    setInterval(function(){getNewArray(frame_array)}, 3);
-    setInterval(function(){hours = hours + 1}, 3);
+    setInterval(function(){getNewArray(frame_array)}, 2);
+    setInterval(function(){hours = hours + 1}, 2);
     setInterval(function(){renderObjects(frame_array)}, 33);
 
 }
@@ -139,9 +134,10 @@ function renderObjects(data) {
     for (i=0 ; i < data.length ; i++) {
         svg.selectAll("dot").data(data)
             .enter().append("circle")
-            .attr("id", `planet_${i}`)
+            // .attr("id", `planet_${i}`)
+            .attr("class", `planet`)
             .attr("r", 3)
-            .attr("fill", `${colors[i]}`)
+            // .attr("fill", `${colors[i]}`)
             .attr("cx", function(d) { return x(d.start_x); })
             .attr("cy", function(d) { return y(d.start_y); })
     }

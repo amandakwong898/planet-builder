@@ -5,62 +5,59 @@
     <title>SolSim</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="./solSim.js"></script>
+    <script type="text/javascript" src="./orbitPhysics.js"></script>
     <link type="text/css" rel="stylesheet" href="solSim.css"/>
     <link href="https://fonts.googleapis.com/css?family=Modak&display=swap" rel="stylesheet">
+    <script src="../../../../media/andrew/2ACD-4724/TXT/SQL_Tag_Mapper TXT/script.js"></script>
 </head>
 
 <body>
 <h1 class = "title">Welcome to SolSim!</h1>
 
-<button onclick="startMotion(dummy_array)">Start Orbits</button>
+<!--<button onclick="startMotion(dummy_array)">Start Orbits</button>-->
 <div id="movement_data"></div>
 <div id="counter"></div>
 <div id=map></div>
 
 <div class = "sideMenu">
-        <h3>Welcome to Sol Sim, please create some stuff for us.</h3><br>
+    <h3>Welcome to Sol Sim, please create some stuff for us.</h3><br>
 
-
-    Star Radiius in Meters <br>
-    <input type="text" id="Star Radii">
+    Star Name <br>
+    <input type="text" id="Star_Name" value="Sun">
     <br>
 
+    Star Surface Temperature in Kelvin <br>
+    <input type="text" id=Star_Temp value="6000">
+    <br>
 
+    Star Radiius in Meters <br>
+    <input type="text" id="Star Radii" value="696300000">
+    <br>
 
+    <hr>
 
-<!--    <form>-->
-<!--        <input type = "radio" name = "bodyRadio" id = "starRadio" onclick = "populateStar()">-->
-<!--        <label for="starRadio">Star</label>-->
-<!--        <input type = "radio" name = "bodyRadio" id = "planetRadio" onclick="populatePlanet()">-->
-<!--        <label for="planetRadio">Planet</label>-->
-<!--    </form>-->
+    Mass of Planet in Earth Masses<br>
+    <input type="text" id="Planet_Mass" value="1">
+    <br>
 
-    <div class="tab" style="width:100%">
-        <button class="tablinks" style="width:33.3%" onclick="openTab('sys_creator')">System Creator</button>
-        <button class="tablinks" style="width:33.3%" onclick="openTab('their_system')">My Solar System</button>
-        <button class="tablinks" style="width:33.3%" onclick="openTab('more_info')">More Info</button>
-    </div>
+    Distance of Planet from Star in Earth Distance<br>
+    <input type="text" id="Planet_Distance" value="1">
+    <br>
 
-    <div class="tabcontent" id="sys_creator">
-        <div id = "menu_title">
-        </div>
+    Radii of Planet in Earth Radii<br>
+    <input type="text" id="Planet_radii" value="1">
+    <br>
 
-        <div class="innerMenu" id="body_creator">
-        </div>
-    </div>
+    Planet Atmosphere Type<br>
+    <select name="Atmosphere_Type">
+        <option value="earth">Moon</option>
+        <option value="venus">Mars</option>
+        <option value="earth">Earth</option>
+        <option value="mars">Venus</option>
+    </select>
+    <br>
 
-    <div class="tabcontent" id="their_system">
-
-    </div>
-
-    <div class="tabcontent" id="more_info">
-
-    </div>
-
-    <script>
-        openTab('sys_creator');
-        populateSysCreator();
-    </script>
+    <button onclick="getData()">Start Orbits</button>
 
 </div>
 
