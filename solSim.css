@@ -14,13 +14,13 @@ body {
     flex-direction: column;
     position: fixed;
     width: 15%;
-    height: 60%;
+    height: 80%;
     background-color: #FFB9C8;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
     border-style: dotted;
     left: 80%;
-    bottom: 15%;
+    bottom: 5%;
 }
 
 .title {
@@ -75,15 +75,15 @@ input[type=text] {
     color: magenta;
 }
 
-input[type=number] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-family: Arial;
-    font-size: 15px;
-    color: magenta;
-}
+/*input[type=number] {*/
+/*    width: 100%;*/
+/*    padding: 12px 20px;*/
+/*    margin: 8px 0;*/
+/*    box-sizing: border-box;*/
+/*    font-family: Arial;*/
+/*    font-size: 15px;*/
+/*    color: magenta;*/
+/*}*/
 
 
 /* Style the tab */
@@ -120,4 +120,70 @@ input[type=number] {
     border: 1px solid #ccc;
     border-top: none;
     height: 80%;
+}
+
+#planet_submit {
+    padding: 20px;
+    margin: 20px;
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    border-radius: 10px;
+    color: magenta;
+}
+
+#sun_submit {
+    padding: 20px;
+    margin: 20px;
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    border-radius: 10px;
+    color: magenta;
+}
+
+#planet_1 {
+    color: green;
+    radius: 10px;
+}
+
+#planet_2 {
+    radius: 10px;
+}
+
+#planet_3 {
+    radius: 10px;
+}
+
+#planet_4 {
+    radius: 10px;
+}
+
+#planet_5 {
+    radius: 10px;
+}
+
+#planet_6 {
+    radius: 10px;
+}
+
+#planet_7 {
+    radius: 10px;
+}
+
+#planet_8 {
+    radius: 10px;
+}
+
+#planet_9 {
+    radius: 10px;
+}
+
+#planet_10 {
+    radius: 10px;
+}
+
+#sun_1 {
+    color: yellow;
+    radius: 20px;
 }
