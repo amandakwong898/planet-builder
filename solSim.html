@@ -22,16 +22,12 @@
 <div class = "sideMenu">
     <h3>Welcome to Sol Sim, please create some stuff for us.</h3><br>
 
-    Star Name <br>
-    <input type="text" id="Star_Name" value="Sun">
-    <br>
-
     Star Surface Temperature in Kelvin <br>
     <input type="text" id=Star_Temp value="6000">
     <br>
 
     Star Radiius in Meters <br>
-    <input type="text" id="Star Radii" value="696300000">
+    <input type="text" id="Star_Radii" value="696300000">
     <br>
 
     <hr>
@@ -44,10 +40,6 @@
     <input type="text" id="Planet_Distance" value="1">
     <br>
 
-    Radii of Planet in Earth Radii<br>
-    <input type="text" id="Planet_radii" value="1">
-    <br>
-
     Planet Atmosphere Type<br>
     <select name="Atmosphere_Type">
         <option value="earth">Moon</option>
@@ -55,9 +47,12 @@
         <option value="earth">Earth</option>
         <option value="mars">Venus</option>
     </select>
-    <br>
+
+
+    <br><br><br>
 
     <button onclick="getData()">Start Orbits</button>
+<!--    <button onclick="stopMotion()">Stop Orbits</button>-->
 
 </div>
 

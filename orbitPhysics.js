@@ -1,3 +1,11 @@
+// $.ajax({
+//     type: "POST",
+//     url: "~/RealTempCalc.py",
+//     data: { param: text}
+// }).done(function( o ) {
+//     // do something
+// });
+
 var dummy_array = [
 
     {
@@ -38,9 +46,34 @@ var dummy_array = [
 ];
 
 
+
+
 var hours = 0;
 var frame_array;
+var initial_array = [];
 
+function getData() {
+    var sun_temp = document.getElementById("Star_Temp").value,
+        sun_radius = document.getElementById("Star_Radii").value,
+        planet_distance = document.getElementById("Planet_Distance").value,
+        //atmosphere_type = document.getElementById("Atmosphere_Type").value,
+        planet_mass = document.getElementById("Planet_Mass").value;
+
+    var planet_info = {
+        "start_x": planet_distance * 1.496 * Math.pow(10, 11) * 1.017,           //earths m from the sun at aphehedron
+        "start_y": 0,
+        "x_velocity": 0,
+        "y_velocity": 0,                                                //velocity in m/s assuming the earth starts at 0
+        "planet_mass": planet_mass * 5.92 * Math.pow(10, 24),     //kg
+        "sun_mass": 1.989 * Math.pow(10, 30),                       //kg
+        "sun_radius": sun_radius,
+        "sun_temp": sun_temp,
+       // "planet_atmosphere": atmosphere_type;
+    }
+
+    initial_array.push(planet_info)
+    startMotion(initial_array)
+}
 
 function startMotion(data) {
     console.log(data)
@@ -50,6 +83,7 @@ function startMotion(data) {
     setInterval(function(){renderObjects(frame_array)}, 33);
 
 }
+
 
 
 function getNewArray(data) {
@@ -101,8 +135,8 @@ function renderObjects(data) {
     var colors = ["magenta", "silver", "turquoise", "teal", "gold", "green", "skyblue", "tomato"];
     console.log(colors[2]);
 
-    var width = "500";
-    var height = "500";
+    var width = "800";
+    var height = "800";
     var xMargin = 30;
     var yMargin = 30;
 

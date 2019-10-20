@@ -4,7 +4,7 @@ body {
 
 
 
-    height: 100vh;
+
     padding:0;
     margin:0;
 }
@@ -26,7 +26,7 @@ body {
 .title {
     color: white;
     font-family: 'Arial', cursive;
-    font-size: 100px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -60,7 +60,7 @@ body {
 
 p {
     font-family: Arial;
-    font-size: 38px;
+    font-size: 18px;
     color: magenta;
     font-style: italic;
 }
@@ -155,11 +155,15 @@ input[type=text] {
 
 .planet {
     r: 4px;
-    fill: green;
+    fill: lightblue;
 }
 
 
 .sun {
     r: 10px;
     fill: orange;
+}
+
+#map {
+    left: 30%;
 }
