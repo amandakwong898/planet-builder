@@ -34,18 +34,20 @@ atm_absorb = sys.argv[5] #TEST VALUE: 0.26
 
 
 #provides appropriate albedo value for formula, based on user choice
-def a():
+def a(planet):
     #Dictionary for albedo value aka reflectivity of surface
     reflectDict = {"Moon": 0.12, "Mars": 0.29, "Earth": 0.31, "Venus": 0.75}
+
     for key in reflectDict:
         if reflectDict[key] == atm_absorb: # atm_absorb is from user input above
-            print(reflectDict[value])
+            print(reflectDict[venys])
             return reflectDict[value] # TRYING TO RETURN VAL OF KEY NOT WORK
 
 #provides appropriate beta value for formula based on user choice
 def b():
     #Dictionary for beta aka atmosphere absorption
     atmDict = {"normal": 0.26, "pollution": 0.26, "eruption": 0.30, "nuclear": 0.75}
+    print(atmDict[pollution])
     for key in atmDict:
         if atmDict[key] == reflect: # reflect is from user input above
             print(atmDict[value])

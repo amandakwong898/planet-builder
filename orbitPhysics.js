@@ -52,7 +52,6 @@ function startMotion(data) {
     getNewArray(data);
     setInterval(function(){getNewArray(frame_array)}, 3);
     setInterval(function(){hours = hours + 1}, 3);
-
     setInterval(function(){renderObjects(frame_array)}, 33);
 
 }
