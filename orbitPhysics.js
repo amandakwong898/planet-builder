@@ -11,6 +11,11 @@ function cheapTrick() {
     startMotion(frame_array);
 }
 
+
+function seeMe() {
+    return "hello_world"
+    console.log("hello_world")
+}
 var frame_array;
 
 function startMotion(data) {
