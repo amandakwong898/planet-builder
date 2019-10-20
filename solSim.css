@@ -2,13 +2,18 @@ body {
     background-color: black;
 }
 
-#sideMenu {
+.sideMenu {
+    display: flex;
+    flex-direction: column;
+    align-content: right;
     position: fixed;
-    width: 40%;
-    height: 75%;
-    top: 5%;
-    left: 90%;
+    width: 15%;
+    height: 60%;
     background-color: #FFB9C8;
+    border-radius: 20px;
+    padding: 10px;
+    border-style: dashed;
+    left: 80%;
 }
 
 .title {
