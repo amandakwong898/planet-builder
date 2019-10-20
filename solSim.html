@@ -5,9 +5,7 @@
     <title>SolSim</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="./solSim.js"></script>
-    <script type="text/javascript" src="./orbitPhysics.js"></script>
     <link type="text/css" rel="stylesheet" href="solSim.css"/>
-    <link type="text/css" rel="stylesheet" href="game.css"/>
     <link href="https://fonts.googleapis.com/css?family=Modak&display=swap" rel="stylesheet">
 </head>
 
@@ -37,10 +35,33 @@
 <!--        <label for="planetRadio">Planet</label>-->
 <!--    </form>-->
 
-    <div id="body_setup">
+    <div class="tab" style="width:100%">
+        <button class="tablinks" style="width:33.3%" onclick="openTab('sys_creator')">System Creator</button>
+        <button class="tablinks" style="width:33.3%" onclick="openTab('their_system')">My Solar System</button>
+        <button class="tablinks" style="width:33.3%" onclick="openTab('more_info')">More Info</button>
     </div>
 
-    <button id = "submit">Submit</button>
+    <div class="tabcontent" id="sys_creator">
+        <div id = "menu_title">
+        </div>
+
+        <div class="innerMenu" id="body_creator">
+        </div>
+    </div>
+
+    <div class="tabcontent" id="their_system">
+
+    </div>
+
+    <div class="tabcontent" id="more_info">
+
+    </div>
+
+    <script>
+        openTab('sys_creator');
+        populateSysCreator();
+    </script>
+
 </div>
 
 

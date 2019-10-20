@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<script type="text/javascript" src="./solSim.js"></script>
+
 <form id = "starText">
     <label for="name1">Name:</label><br>
     <input type = "text" id = "name1"><br>
     <label for="mass1">Mass:</label><br>
-    <input type = "text" id = "mass1"><br>
+    <input type = "number" id = "mass1"><br>
     <label for="radius1">Radius:</label><br>
-    <input type = "text" id = "radius1"><br>
+    <input type = "number" id = "radius1"><br>
     <label for="temp">Temperature:</label><br>
-    <input type = "text" id = "temp"><br>
+    <input type = "number" id = "temp"><br>
     <br>
-    <br>
+    <input type = "submit" id="sun_submit" value="Create Sun" onclick="addBody();populatePlanet();">
 </form>
-</body>
-</html>
