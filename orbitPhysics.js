@@ -12,6 +12,10 @@ function startMotion(data) {
     setInterval(function(){pushArray(frame_array)}, 30);
 }
 
+function printCSV(data) {
+    return data
+    console.log(data)
+}
 
 var frame_array;
 
