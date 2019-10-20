@@ -5,6 +5,7 @@
     <title>SolSim</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="./solSim.js"></script>
+    <script type="text/javascript" src="./orbitPhysics.js"></script>
     <link type="text/css" rel="stylesheet" href="solSim.css"/>
     <link href="https://fonts.googleapis.com/css?family=Modak&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +13,10 @@
 <body>
 <h1 class = "title">Welcome to SolSim!</h1>
 
-<canvas id = game></canvas>
+<button onclick="startMotion(dummy_array)">Start Orbits</button>
+<div id="movement_data"></div>
+<div id="counter"></div>
+<div id=map></div>
 
 <div class = "sideMenu">
         <p>I am making a:</p>
