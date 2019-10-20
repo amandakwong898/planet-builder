@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form id = \"planetText\">
+<script type="text/javascript" src="./solSim.js"></script>
+
+<form id = "planetText">
     <label for="name2">Name:</label><br>
     <input type = "text" id = "name2"><br>
     <label for="mass2">Mass (kg*e^15):</label><br>
-    <input type = "text" id = "mass2"><br>
+    <input type = "number" id = "mass2"><br>
     <label for="radius2">Radius:</label><br>
-    <input type = "text" id = "radius2"><br>
+    <input type = "number" id = "radius2"><br>
     <!--TODO: Slider and color picker -->
-    </form>
-<br>
-<br>
-</body>
-</html>
+    <input type = "submit" id="planet_submit" onclick = "populatePlanet();addBody();" value="Create Planet">
+</form>

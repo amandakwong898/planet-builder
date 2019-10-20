@@ -1,40 +1,56 @@
-// $("#starRadio").onclick(() => {
-//     console.log("onclick is running");
-//     $("body_setup").append(
-//         " <form>\n" +
-//         "            <input type = \"text\" name = \"\">Name<br>\n" +
-//         "            <input type = \"text\" name = \"\">Mass<br>\n" +
-//         "            <input type = \"text\" name = \"\">Radius<br>\n" +
-//         "            <input type = \"text\" name = \"\">Temperature<br>\n" +
-//         "</form>\n"
-//     )
-// }
+
+var bodyCounter = 0;
+var currentTab;
 
 
+function openTab(tab_name){
+        // Declare all variables
+        var i, tabcontent, tablinks;
 
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tab_name).style.display = "block";
+        //evt.currentTarget.className += " active";
+}
 
 function populateStar() {
-    document.getElementById("body_setup").innerHTML = "   <form id = \"starText\">\n" +
-        "        Name:<br>\n" +
-        "        <input type = \"text\" id = \"name1\"><br>\n" +
-        "        Mass:<br>\n" +
-        "        <input type = \"text\" id = \"mass1\"><br>\n" +
-        "        Radius:<br>\n" +
-        "        <input type = \"text\" id = \"radius1\"><br>\n" +
-        "        Temperature:<br>\n" +
-        "        <input type = \"text\" id = \"temp\"><br>\n" +
-        "    </form>";
+    document.getElementById("menu_title").innerHTML = "<p>Make Your Central Star!</p>";
+    document.getElementById("body_creator").innerHTML = '<object type="text/html" data="star.html"></object>';
 }
 
 function populatePlanet() {
-    document.getElementById("body_setup").innerHTML = "    <form id = \"planetText\">\n" +
-        "        <label for=\"name2\">Name:</label><br>\n" +
-        "        <input type = \"text\" id = \"name2\"><br>\n" +
-        "        <label for=\"mass2\">Mass:</label><br>\n" +
-        "        <input type = \"text\" id = \"mass2\"><br>\n" +
-        "        <label for=\"radius2\">Radius:</label><br>\n" +
-        "        <input type = \"text\" id = \"radius2\"><br>\n" +
-        //TODO: Slider and color picker
-        "    </form>";
+    //limits the solar system to nine planets
+    if(bodyCounter <= 10) {
+        document.getElementById("menu_title").innerHTML = "<p> Make a Planet! </p>";
+        document.getElementById("body_creator").innerHTML = '<object type="text/html" data="planet.html" ></object>';
+    }
+    else{
+        document.getElementById("menu_title").innterHTML = "<p>Your solar system is full!</p>";
+        document.getElementById("body_creator").innerHTML = "";
+    }
+}
+
+function populateSysCreator(){
+    if(bodyCounter == 0){
+        populateStar();
+    }
+    if(bodyCounter > 0){
+        populatePlanet();
+    }
+}
+
+function addBody(){
+    bodyCounter++;
 }
 

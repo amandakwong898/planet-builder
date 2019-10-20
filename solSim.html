@@ -15,18 +15,34 @@
 <canvas id = game></canvas>
 
 <div class = "sideMenu">
-        <p>I am making a:</p>
-    <form>
-        <input type = "radio" name = "bodyRadio" id = "starRadio" onclick = "populateStar()">
-        <label for="starRadio">Star</label>
-        <input type = "radio" name = "bodyRadio" id = "planetRadio" onclick="populatePlanet()">
-        <label for="planetRadio">Planet</label>
-    </form>
 
-    <div id="body_setup">
+    <div class="tab" style="width:100%">
+        <button class="tablinks" style="width:33.3%" onclick="openTab('sys_creator')">System Creator</button>
+        <button class="tablinks" style="width:33.3%" onclick="openTab('their_system')">My Solar System</button>
+        <button class="tablinks" style="width:33.3%" onclick="openTab('more_info')">More Info</button>
     </div>
 
-    <button id = "submit">Submit</button>
+    <div class="tabcontent" id="sys_creator">
+        <div id = "menu_title">
+        </div>
+
+        <div class="innerMenu" id="body_creator">
+        </div>
+    </div>
+
+    <div class="tabcontent" id="their_system">
+
+    </div>
+
+    <div class="tabcontent" id="more_info">
+
+    </div>
+
+    <script>
+        openTab('sys_creator');
+        populateSysCreator();
+    </script>
+
 </div>
 
 
