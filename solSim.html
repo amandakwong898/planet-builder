@@ -3,46 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>SolSim</title>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js%22%3E</script>
     <script type="text/javascript" src="./solSim.js"></script>
+    <script type="text/javascript" src="./orbitPhysics.js"></script>
     <link type="text/css" rel="stylesheet" href="solSim.css"/>
+    <link type="text/css" rel="stylesheet" href="game.css"/>
     <link href="https://fonts.googleapis.com/css?family=Modak&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <h1 class = "title">Welcome to SolSim!</h1>
 
-<canvas id = game></canvas>
+<button onclick="startMotion(dummy_array)">Start Orbits</button>
+<div id="movement_data"></div>
+<div id="counter"></div>
+<div id=map></div>
 
 <div class = "sideMenu">
-
-    <div class="tab" style="width:100%">
-        <button class="tablinks" style="width:33.3%" onclick="openTab('sys_creator')">System Creator</button>
-        <button class="tablinks" style="width:33.3%" onclick="openTab('their_system')">My Solar System</button>
-        <button class="tablinks" style="width:33.3%" onclick="openTab('more_info')">More Info</button>
-    </div>
-
-    <div class="tabcontent" id="sys_creator">
-        <div id = "menu_title">
-        </div>
-
-        <div class="innerMenu" id="body_creator">
-        </div>
-    </div>
-
-    <div class="tabcontent" id="their_system">
-
-    </div>
-
-    <div class="tabcontent" id="more_info">
-
-    </div>
-
-    <script>
-        openTab('sys_creator');
-        populateSysCreator();
-    </script>
-
+    <label for="name2">Name:</label><br>
+    <input type = "text" id = "name2"><br>
+    <label for="mass2">Mass:</label><br>
+    <input type = "number" id = "mass2"><br>
+    <label for="radius2">Radius:</label><br>
+    <input type = "number" id = "radius2"><br>
+    <input type = "submit" id="planet_submit" value="Create Planet">
 </div>
 
 
