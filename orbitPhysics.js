@@ -72,8 +72,9 @@ function getData() {
     }
 
     initial_array.push(planet_info)
-    startMotion(initial_array)
 }
+
+
 
 function startMotion(data) {
     console.log(data)
@@ -92,14 +93,14 @@ function getNewArray(data) {
 
     for (i=0 ; i < data.length ; i++) {
         //frame_array.shift();
-        frame_array.push(moveBody(data[i].start_x, data[i].start_y, data[i].x_velocity, data[i].y_velocity, data[i].planet_mass, 3600))
+        frame_array.push(moveBody(data[i].start_x, data[i].start_y, data[i].x_velocity, data[i].y_velocity, data[i].planet_mass, 3600, i))
     }
     //console.log(frame_array)
     //return frame_array
     //renderObjects(frame_array)
 }
 
-function moveBody(x, y, dx, dy, m_planet, time) {
+function moveBody(x, y, dx, dy, m_planet, time, i) {
 
     // var theta       =   (y == 0) ? 3.14159 / 2 :  Math.atan(y / x),
     var theta       =   Math.atan2(y, x),
@@ -124,6 +125,9 @@ function moveBody(x, y, dx, dy, m_planet, time) {
     x = x + dx * time + .5 * ddx * Math.pow(time, 2)
     y = y + dy * time + .5 * ddy * Math.pow(time, 2)
 
+   // document.getElementById(`movement_data_${i}`).innerHTML = `<p>Distance: ${radius}m <br> X_Pos: ${x}m <br> Y_Pos: ${y}m <br> Theta: ${theta}rad <br> Total_Force: ${force}N <br>  X_Force: ${force_x}N <br> Y_Force: ${force_y}N</p>`
+
+
     return {"start_x": x, "start_y": y, "x_velocity": dx, "y_velocity": dy, "planet_mass": m_planet, "time": time}
 
 }
@@ -135,8 +139,8 @@ function renderObjects(data) {
     var colors = ["magenta", "silver", "turquoise", "teal", "gold", "green", "skyblue", "tomato"];
     console.log(colors[2]);
 
-    var width = "800";
-    var height = "800";
+    var width = "1200";
+    var height = "400";
     var xMargin = 30;
     var yMargin = 30;
 
@@ -150,11 +154,11 @@ function renderObjects(data) {
         .attr("height", height);
 
     var x = d3.scaleLinear()
-        .domain([-mapScale, mapScale])
+        .domain([2* -mapScale, 2* mapScale])
         .range([0, width]);
 
     var y = d3.scaleLinear()
-        .domain([-mapScale, mapScale])
+        .domain([.5 * -mapScale, .5 * mapScale])
         .range([height, 0]);
 
     svg.selectAll("star").data(data)
